@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family:'Inter' , sans-serif;
+}
+.nav{
+    @apply fixed z-[9999] bg-white bg-opacity-80;
+    backdrop-filter: blur(6px);
+    box-shadow: inset 0 -1px 0  0 rgba(0, 0, 0, 0.1);
+}
+#div{
+    font-size:40px;
+
+}
+.span{
+    @apply w-[35px] h-[4px] my-2 block bg-dark;
+}
+
+.humberger-active > span:nth-child(1) {
+    @apply rotate-45;
+}
+.humberger-active > span:nth-child(3) {
+    @apply -rotate-45;
+}
+.humberger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+@media (min-width:800px){
+    .svg{
+        width:70.3333%;
+        @apply   --tw-translate-x: 33.333333%;
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+}
